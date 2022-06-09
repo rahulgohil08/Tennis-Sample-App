@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.theworld.androidtemplatewithnavcomponents.ui.dashboard.DashboardFragment"
+        android:label="@string/dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_editStringerFragment"
+            app:destination="@id/editStringerFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_createStringerFragment"
+            app:destination="@id/createStringerFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/createStringerFragment"
+        android:name="com.theworld.androidtemplatewithnavcomponents.ui.CreateStringerFragment"
+        android:label="Create Stringer"
+        tools:layout="@layout/fragment_create_stringer" />
+
+
+    <fragment
+        android:id="@+id/editStringerFragment"
+        android:name="com.theworld.androidtemplatewithnavcomponents.ui.EditStringerFragment"
+        android:label="Edit Stringer"
+        tools:layout="@layout/fragment_edit_stringer" >
+        <argument
+            android:name="stringer"
+            app:argType="com.theworld.androidtemplatewithnavcomponents.data.stringer.response.Stringer" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.theworld.androidtemplatewithnavcomponents.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+
+</navigation>

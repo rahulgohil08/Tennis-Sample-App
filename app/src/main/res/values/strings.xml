@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tennis App Sample</string>
+    <string name="dashboard">Stringers</string>
+    <string name="view">Display</string>
+    <string name="notifications">Notification</string>
+    <string name="menu">More Menu</string>
+    <string name="fab">FAB</string>
+</resources>
